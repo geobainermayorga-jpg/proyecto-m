@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // **Usuarios Definidos:**
     const usuariosPermitidos = {
         "GMB": "130698G", // Administrador
-        "Azul": "271025M" // Observador
+        "Marlen": "Marlen" // Observador
     };
 
     if (usuariosPermitidos[usuario] === contrasena) {
