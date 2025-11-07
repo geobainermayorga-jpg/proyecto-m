@@ -1,0 +1,198 @@
+/* ================================================= */
+/* ESTILOS GLOBALES Y LOGIN MEJORADO (Elegante)      */
+/* ================================================= */
+
+body {
+    /* Fondo Azul Oscuro Elegante (para el login, y general) */
+    background-color: #0d1b2a; 
+    font-family: 'Georgia', serif; 
+    margin: 0;
+    padding: 0;
+    
+    /* Centrado del formulario de Login */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    /* Fondo del contenedor: Azul oscuro más claro */
+    background-color: #1b263b; 
+    padding: 40px; 
+    border-radius: 12px; 
+    /* Sombra elegante y profunda */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 5px rgba(255, 195, 0, 0.3);
+    width: 320px;
+    text-align: center;
+    border: 1px solid #0d1b2a; 
+}
+
+.login-container h2 {
+    color: #ffc300; /* Dorado/Ámbar */
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: #e0fbfc; 
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #005f73; 
+    border-radius: 6px;
+    box-sizing: border-box;
+    background-color: #0d1b2a; 
+    color: #a9def9; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #ffc300; 
+    box-shadow: 0 0 5px #ffc300; 
+    outline: none;
+}
+
+.login-container button {
+    background-color: #ffc300; 
+    color: #1b263b; 
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background-color: #ffd640; 
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #ff6b6b; 
+    margin-top: 15px;
+    display: none; 
+}
+
+/* --- ESTILO PARA EL ICONO DE CONTRASEÑA (si el navegador lo permite) --- */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    filter: invert(100%); 
+}
+
+
+/* ================================================= */
+/* ESTILOS ELEGANTES DEDICATORIA                     */
+/* ================================================= */
+
+.dedicatoria-body {
+    background-color: #0d1b2a; 
+    color: #e0fbfc; 
+    font-family: 'Cormorant Garamond', serif; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    
+    /* Padding reducido, ya que el footer ya no flota */
+    padding-bottom: 40px; 
+}
+
+/* Encabezado */
+.dedicatoria-body header {
+    background-color: #1b263b; 
+    color: #ffc300; 
+    padding: 30px 0;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.dedicatoria-body h1 {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 4em;
+    font-weight: normal;
+}
+
+/* Contenedor de Mensajes */
+.mensajes-container {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    width: 100%;
+}
+
+/* Estilo de los Mensajes Individuales */
+.mensaje {
+    background-color: rgba(45, 64, 89, 0.6); 
+    border-left: 5px solid #a9def9; 
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(169, 222, 249, 0.2); 
+    transition: transform 0.3s ease;
+}
+
+.mensaje:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(169, 222, 249, 0.4);
+}
+
+.cita {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: #e0fbfc; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen de la Rosa */
+.imagen-rosa {
+    max-width: 400px; 
+    height: 400px; 
+    display: block;  
+    
+    /* Margen normal */
+    margin: 40px auto 40px auto; 
+    
+    border: 5px solid #ffc300; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow: 0 0 20px rgba(255, 195, 0, 0.6); 
+}
+
+/* Pie de Página (Footer) - Solución definitiva de solapamiento */
+.footer-dedicatoria {
+    padding: 40px 20px; /* Más padding para hacerlo visualmente más grande */
+    background-color: #0b132b; 
+    color: #a9def9; 
+    width: 100%;
+    
+    /* REQUERIMIENTO: Centrado y letra más grande */
+    text-align: center;
+    font-size: 1.3em; 
+    font-weight: bold;
+
+    /* SOLUCIÓN: Eliminar posición absoluta para que no flote */
+    position: relative; 
+    margin-top: 80px; /* Espacio para separarlo de la imagen y citas */
+}
