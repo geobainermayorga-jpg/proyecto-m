@@ -10,11 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css"> 
-</head>
+
+    <script>
+        // Si no hay bandera de acceso permitido, redirige inmediatamente al login
+        if (sessionStorage.getItem('acceso_permitido') !== 'true') {
+            // Asegúrate de usar el nombre de tu archivo de login (index.html o login.html)
+            window.location.href = 'index.html'; 
+        }
+
+        // Script para prevenir que el botón de atrás regrese a esta página
+        window.onload = function() {
+            if (typeof history.pushState === "function") {
+                history.pushState("dedicatoria", null, null);
+                window.onpopstate = function() {
+                    history.pushState('dedicatoria', null, null);
+                };
+            }
+        };
+    </script>
+    </head>
 <body class="dedicatoria-body">
     <header>
         <h1> Para Marlen </h1>
-    </header> <main class="mensajes-container">
+    </header> 
+    <main class="mensajes-container">
         <section class="mensaje">
             <p class="cita">"Marlen, eres la calma en medio del caos y mi lugar favorito en el mundo. Me haces sentir que lo cotidiano es extraordinario. Gracias por simplemente estar en mi vida."</p>
         </section>
