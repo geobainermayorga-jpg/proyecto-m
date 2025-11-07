@@ -12,7 +12,14 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     };
 
     if (usuariosPermitidos[usuario] === contrasena) {
-        // SOLUCIÓN AL PROBLEMA DE CONEXIÓN: Usamos la ruta relativa más segura
+        
+        // ************************************************
+        // CAMBIO DE SEGURIDAD CRÍTICO: 
+        // Establecer la bandera de acceso en la sesión
+        sessionStorage.setItem('acceso_permitido', 'true');
+        // ************************************************
+
+        // Redirigir a la página de dedicatoria
         window.location.href = "./dedicatoria.html"; 
     } else {
         // Credenciales incorrectas
